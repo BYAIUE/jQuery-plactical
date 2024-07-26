@@ -1,5 +1,4 @@
 body {
-    max-width: 1200px;
     font-family: "Noto Sans JP", sans-serif;
     color: #000000;
     margin: 0 auto;
@@ -122,13 +121,6 @@ h3 {
     font-size: 18px;
 }
 
-/* フッター */
-footer > p {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-
 /* モーダル */
 #modal {
     position: fixed;
@@ -168,6 +160,13 @@ footer > p {
 #modal-close, .worksimg{
     cursor: pointer;
 }
+
+/* フッター */
+footer > p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 
 
 }
@@ -221,6 +220,8 @@ nav a {
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 0  30px 0 30px;
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 h2 {
@@ -252,6 +253,8 @@ h3 {
 #works {
     width: 100%;
     margin: 100px auto 0 auto;
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 
@@ -266,6 +269,61 @@ h3 {
 .works-about > p {
     font-size: 18px;
     text-align: center;
+}
+
+/* トップへのボタン */
+.top-button {
+    position:fixed;
+    right: 20px;
+    bottom: 38px;
+    background-color: #000000;
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 28px 24px;
+    border-radius: 50%;
+    display: none;
+}
+
+/* モーダル */
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+#modaldiv {
+    position: relative;
+    height: 100vh;
+}
+
+#modaldiv > span {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+#modaldiv > img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+#modal-close, .worksimg{
+    cursor: pointer;
 }
 
 /* フッター */
