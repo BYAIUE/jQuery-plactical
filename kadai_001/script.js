@@ -10,6 +10,7 @@ $(function(){
         },300);
     });
 
+    $(document).ready(function(){
     $('.fade').slick({
         autoplay: true,
         autoplayspeed: 4000,
@@ -20,6 +21,8 @@ $(function(){
         cssEase: 'linear',
         swipe: true
       });
+    });
+
     
     $(window).scroll(function(){  
         let numScroll = $(this).scrollTop();
@@ -28,7 +31,13 @@ $(function(){
         }else if (numScroll >= 100){
             $('.top-button').fadeIn();
             }
-        });
+        }).on('init', function(event, slick){
+            console.log('Slick initialized');
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            console.log('Before slide change');
+        }).on('afterChange', function(event, slick, currentSlide){
+            console.log('After slide change');
+        });;
 
     $('a[href^="#"]').on('click',function(event){
 
@@ -63,13 +72,13 @@ $(function(){
         let img = $(this).attr('src');
     
         if (img === 'images/works1.png') {
-            $('#modal-image').attr('src','images/works1.png');
+            $('#modal-image').attr('src',img);
         }
         if (img === 'images/works2.png') {
-            $('#modal-image').attr('src','images/works2.png');
+            $('#modal-image').attr('src', img);
         }
         if (img === 'images/works3.png') {
-            $('#modal-image').attr('src','images/works3.png');
+            $('#modal-image').attr('src',img);
         }
     });
 
