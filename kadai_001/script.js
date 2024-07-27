@@ -13,7 +13,7 @@ $(function(){
     $(document).ready(function(){
     $('.fade').slick({
         autoplay: true,
-        autoplayspeed: 4000,
+        autoplaySpeed: 4000,
         dots: true,
         infinite: true,
         speed: 500,
