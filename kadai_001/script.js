@@ -31,13 +31,7 @@ $(function(){
         }else if (numScroll >= 100){
             $('.top-button').fadeIn();
             }
-        }).on('init', function(event, slick){
-            console.log('Slick initialized');
-        }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
-            console.log('Before slide change');
-        }).on('afterChange', function(event, slick, currentSlide){
-            console.log('After slide change');
-        });;
+        });
 
     $('a[href^="#"]').on('click',function(event){
 
